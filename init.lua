@@ -1,4 +1,6 @@
 require("keys")
 require("packerconfig")
 require("goconfig")
-
+require("lualineconfig")
+require("lspconfig")
+require("tsconfig")

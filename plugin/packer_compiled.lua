@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/cesar/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,25 +74,36 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/cesar/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/cesar/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/cesar/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/cesar/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["themer.lua"] = {
-    config = { "\27LJ\2\n˜\2\0\0\5\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vstyles\14parameter\1\0\1\nstyle\vitalic\20variableBuiltIn\1\0\1\nstyle\vitalic\rvariable\1\0\1\nstyle\vitalic\20functionbuiltin\1\0\1\nstyle\vitalic\rfunction\1\0\0\1\0\1\nstyle\vitalic\1\0\1\16colorscheme\15everforest\nsetup\vthemer\frequire\0" },
+    config = { "\27LJ\2\nb\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16colorscheme\31gruvbox-material-dark-hard\nsetup\vthemer\frequire\0" },
     loaded = true,
-    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/themer.lua",
+    path = "/home/cesar/.local/share/nvim/site/pack/packer/start/themer.lua",
     url = "https://github.com/themercorp/themer.lua"
   },
   ["vim-go"] = {
     loaded = true,
-    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/vim-go",
+    path = "/home/cesar/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
   }
 }
@@ -100,7 +111,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: themer.lua
 time([[Config for themer.lua]], true)
-try_loadstring("\27LJ\2\n˜\2\0\0\5\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vstyles\14parameter\1\0\1\nstyle\vitalic\20variableBuiltIn\1\0\1\nstyle\vitalic\rvariable\1\0\1\nstyle\vitalic\20functionbuiltin\1\0\1\nstyle\vitalic\rfunction\1\0\0\1\0\1\nstyle\vitalic\1\0\1\16colorscheme\15everforest\nsetup\vthemer\frequire\0", "config", "themer.lua")
+try_loadstring("\27LJ\2\nb\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16colorscheme\31gruvbox-material-dark-hard\nsetup\vthemer\frequire\0", "config", "themer.lua")
 time([[Config for themer.lua]], false)
 
 _G._packer.inside_compile = false

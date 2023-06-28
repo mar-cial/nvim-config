@@ -15,26 +15,23 @@ local packer_bootstrap = ensure_packer()
 
 require("packer").startup(function(use)
   -- Packer can manage itself
-  use("wbthomason/packer.nvim")
-  use("neovim/nvim-lspconfig")
+  use "wbthomason/packer.nvim" 
+  use "neovim/nvim-lspconfig" 
   use 'fatih/vim-go'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   -- themer VERY IMPORTANT DO NOT FUCKING DELETE
   use({
         "themercorp/themer.lua",
         config = function()
 	      require("themer").setup({
-	          colorscheme = "everforest",
-	          styles = {
-	            	["function"] = { style = 'italic' },
-	             	functionbuiltin = { style = 'italic' },
-	             	variable = { style = 'italic' },
-	              	variableBuiltIn = { style = 'italic' },
-	            	parameter  = { style = 'italic' },
-	          },
+	          colorscheme = "gruvbox-material-dark-hard",
 	      })
         end
-    })
+  })
 end)
 
 -- the first run will install packer and our plugins
