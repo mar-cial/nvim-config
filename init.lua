@@ -1,6 +1,5 @@
 require("keys")
+require("masonconfig")
 require("packerconfig")
-require("goconfig")
 require("lualineconfig")
-require("lspconfig")
-require("tsconfig")
+
